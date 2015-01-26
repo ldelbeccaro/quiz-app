@@ -1,0 +1,186 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* general */
+body {
+	background-color: #f9f9f9;
+	padding: 1.5em;
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+h1 {
+	font-size: 2.5em;
+	margin-top: 1em;
+}
+
+/* progress bar styles */
+.quiz-progress {
+	position: relative;
+	margin: 2em auto 3.5em;
+	padding: 2em 0;
+	max-width: 35em;
+}
+.progress-bar {
+	position: relative;
+	margin: 0.5em;
+}
+.bar,
+.bar-over {
+	position: absolute;
+	margin: 0 auto;
+	float: left;
+	background-color: #e0e0e0;
+	height: 0.7em;
+	width: 100%;
+	top: 0;
+}
+.bar-over {
+	background-color: CornflowerBlue;
+	width: 25%;
+	/* display: none; */
+}
+.circles {
+	position: absolute;
+	margin: 0 auto;
+	float: left;
+	width: 27em;
+	height: 0.7em;
+	top: 0;
+}
+.circle {
+	position: relative;
+	float: left;
+	background-color: #e0e0e0;
+	height: 1.4em;
+	width: 1.4em;
+	border-radius: 50%;
+	vertical-align: top;
+	top: -50%;
+}
+.one {
+	left: -1%;
+	background-color: CornflowerBlue;
+}
+.two {
+	left: 24.5%;
+	background-color: CornflowerBlue;
+}
+.three {
+	left: 50%;
+}
+.four {
+	left: 75.5%;
+}
+.five {
+	left: 101%;
+}
+.quiz-progress p {
+	padding: 1.5em 1.5em 0.5em;
+}
+.progress {
+	position: relative;
+	float: left;
+}
+.score {
+	position: relative;
+	float: right;
+}
+
+/* question styles */
+.quiz {
+	position: relative;
+	margin: 1.5em auto;
+	padding: 1em;
+	border: 1px solid #e0e0e0;
+	border-radius: 1px;
+	max-width: 40em;
+}
+h2 {
+	font-size: 1.5em;
+	margin: 1em 0 1.5em;
+}
+button {
+	width: 15em;
+	height: 2.3em;
+	font-size: 1.1em;
+	background-color: CornflowerBlue;
+	color: white;
+	border-radius: 1px;
+	border: none;
+	display: block;
+	margin: 1em auto;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #64A8ED;
+}
+.feedback {
+	font-size: 1.5em;
+	margin: 1.5em 0 1em;
+	color: #FA6686;
+	/* color: #66FADA; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
