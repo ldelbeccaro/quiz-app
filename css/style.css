@@ -80,8 +80,8 @@ h1 {
 }
 .bar-over {
 	background-color: CornflowerBlue;
-	width: 25%;
-	/* display: none; */
+	width: 0%;
+	display: none;
 }
 .circles {
 	position: absolute;
@@ -103,11 +103,9 @@ h1 {
 }
 .one {
 	left: -1%;
-	background-color: CornflowerBlue;
 }
 .two {
 	left: 24.5%;
-	background-color: CornflowerBlue;
 }
 .three {
 	left: 50%;
@@ -130,17 +128,29 @@ h1 {
 	float: right;
 }
 
-/* question styles */
+/* quiz box styles */
 .quiz {
 	position: relative;
-	margin: 1.5em auto;
+	margin: 1.5em auto 2.5em;
 	padding: 1em;
 	border: 1px solid #e0e0e0;
 	border-radius: 1px;
 	max-width: 40em;
+	height: 22em;
+}
+.quiz > * {
+	display: none;
+}
+#start {
+	position: relative;
+	top: 35%;
+	display: initial;
+	font-size: 1.3em;
+	width: 10em;
 }
 h2 {
 	font-size: 1.5em;
+	line-height: 1.3em;
 	margin: 1em 0 1.5em;
 }
 button {
@@ -156,31 +166,16 @@ button {
 }
 button:hover {
 	cursor: pointer;
-	background-color: #64A8ED;
 }
 .feedback {
+	display: none;
 	font-size: 1.5em;
 	margin: 1.5em 0 1em;
 	color: #FA6686;
-	/* color: #66FADA; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.final {
+	position: relative;
+	top: 40%;
+	color: CornflowerBlue;
+	font-size: 2em;
+}

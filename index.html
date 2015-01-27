@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Harry Potter Quiz</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/colors.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<header>
@@ -21,14 +24,15 @@
 				<div class="circle five"></div>
 			</div>
 		</div>
-		<p class="progress">Progress:</p>
-		<p class="score">Score:</p>
+		<p class="progress">Progress: <span class="progress-ratio">0/5</span></p>
+		<p class="score">Score: <span class="score-ratio">0/0</span></p>
 	</section>
 	<section class="quiz">
-		<h2 class="question">Who gave Harry the resurrection stone?</h2>
-		<button class="option1">Voldemort</button>
-		<button class="option2">His father</button>
-		<button class="option3">Dumbledore</button>
+		<button id="start">Start</button>
+		<h2 id="question"></h2>
+		<button id="option1"></button>
+		<button id="option2"></button>
+		<button id="option3"></button>
 		<p class="feedback">Incorrect</p>
 	</section>
 </body>
