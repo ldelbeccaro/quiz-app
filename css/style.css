@@ -141,7 +141,7 @@ h1 {
 .quiz > * {
 	display: none;
 }
-#start {
+.start {
 	position: relative;
 	top: 35%;
 	display: initial;
@@ -175,7 +175,7 @@ button:hover {
 }
 .final {
 	position: relative;
-	top: 40%;
+	top: 33%;
 	color: CornflowerBlue;
 	font-size: 2em;
 }

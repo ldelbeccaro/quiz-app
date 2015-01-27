@@ -13,7 +13,7 @@ $(document).ready( function() {
 			  choices: [ '5', '7', '9' ],
 			  correct: '#option2'
 			},
-			{ question: 'Which two teams played in the Quiddith World Cup that Harry attended?',
+			{ question: 'Which two teams played in the Quidditch World Cup that Harry attended?',
 			  choices: [ 'Russia and England', 'Bulgaria and Ireland', 'Romania and Norway' ],
 			  correct: '#option2'
 			},
@@ -57,13 +57,19 @@ $(document).ready( function() {
 				new Question(questions[progress].question, questions[progress].choices, questions[progress].correct);
 			}
 			else {
-				$( '.quiz' ).html('<p class="final">Final Score: ' + score + '/5</p>');
+				$( '.quiz' ).append('<p class="final">Final score: ' + score + '/5</p><br><button class="start" id="again" style="display: block; top: 37%">Play again</button>');
 				$( '.quiz > p' ).fadeIn(400);
+				$( 'button#again' ).fadeIn(400);
+				$( '.feedback' ).hide();
 			}
 		}
 
 		function updateProgressBar() {
-			if ( progress == 1 ) {
+			if ( progress == 0 ) {
+				$( '.circle' ).css('background-color', 'rgb(224, 224, 224)');
+				$( '.bar-over' ).css('width', '0%');
+			}
+			else if ( progress == 1 ) {
 				$( '.one' ).animate({ backgroundColor: 'cornflowerblue'}, 200);
 			}
 			else if ( progress == 2 ) { 
@@ -82,6 +88,9 @@ $(document).ready( function() {
 				$( '.five' ).delay(260).animate({ backgroundColor: 'cornflowerblue'}, 200);
 				$( '.bar-over' ).animate({ width: '100%'}, 400);
 			}
+
+			$( '.progress-ratio' ).text( progress + '/5' );
+			$( '.score-ratio' ).text( score + '/' + progress );
 		}
 
 		$( '.quiz > button' ).click(function () {
@@ -91,16 +100,12 @@ $(document).ready( function() {
 				console.log('Correct: ' + $(this).text() );
 				progress++;
 				score++;
-				$( '.progress-ratio' ).text( progress + '/5' );
-				$( '.score-ratio' ).text( score + '/' + progress );
 			}
 			else {
 				$( '.feedback' ).text('Incorrect').css('color', 'rgb(250, 102, 134').fadeIn(300);
 				$(this).css('background-color', 'rgb(250, 102, 134)');
 				console.log('Incorrect: ' + $(this).text() );
 				progress++;
-				$( '.progress-ratio' ).text( progress + '/5' );
-				$( '.score-ratio' ).text( score + '/' + progress );
 			}
 
 			new clearQuestion();
@@ -112,11 +117,13 @@ $(document).ready( function() {
 			new updateProgressBar();
 		});
 
+		new clearQuestion();
+		new updateProgressBar();
 		new Question(questions[0].question, questions[0].choices, questions[0].correct);
 	}
 
-	$( '#start' ).click(function() {
-		$( this ).hide();
+	$( '.quiz' ).on('click', 'button.start', function() {
+		$( '.quiz' ).children().fadeOut(400);
 		new startGame();
 	});
 
